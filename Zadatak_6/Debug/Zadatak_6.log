@@ -1,0 +1,4 @@
+﻿  Source.c
+C:\Users\vedro\source\repos\Zadatak_6\Zadatak_6\Source.c(102,12): warning C4098: 'push': 'void' function returning a value
+C:\Users\vedro\source\repos\Zadatak_6\Zadatak_6\Source.c(122,15): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Zadatak_6.vcxproj -> C:\Users\vedro\source\repos\Zadatak_6\Debug\Zadatak_6.exe
