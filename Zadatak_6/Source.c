@@ -61,7 +61,7 @@ int main() {
 				broj = createRandom();
 				push(&head, broj);
 
-				if(prevToLast->next != NULL)
+				if(prevToLast->next->next != NULL)
 				prevToLast = prevToLast->next;
 				
 				break;
