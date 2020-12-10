@@ -26,6 +26,8 @@ int main() {
 	char b, temp;
 	int broj = 0;
 
+	srand(time(0));
+
 	while (a != '\n') {
 		printf("Zelite li urediti stog(S) ili red(R)?\nZa izlaz pritisnite enter\n");
 		a = getchar();
@@ -118,8 +120,6 @@ void pop(Position p) {
 }
 
 int createRandom() {
-	srand(time(0));
-
 	int a = rand() % 91 + 10;
 
 	return a;
