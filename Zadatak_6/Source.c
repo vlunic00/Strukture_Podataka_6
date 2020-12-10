@@ -111,10 +111,8 @@ void pop(Position p) {
 		printf("Lista je vec prazna!");
 		return;
 	}
-	Position temp;
-	temp = (Position)malloc(sizeof(Position));
+	Position temp = p->next;
 
-	temp = p->next;
 	p->next = temp->next;
 	free(temp);
 }
