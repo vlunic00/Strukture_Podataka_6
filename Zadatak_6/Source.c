@@ -21,7 +21,7 @@ int main() {
 	_list stogHead;
 	head.next = NULL;
 	stogHead.next = NULL;
-	Position prevToLast = &head;
+	Position last = &head;
 	char a = ' ';
 	char b, temp;
 	int broj = 0;
@@ -59,15 +59,13 @@ int main() {
 			switch (toupper(b)) {
 			case 'D':
 				broj = createRandom();
-				push(&head, broj);
+				push(last, broj);
+				last = last->next;
 
-				if(prevToLast->next->next != NULL)
-				prevToLast = prevToLast->next;
-				
 				break;
 
 			case 'S':
-				pop(prevToLast);
+				pop(&head);
 				break;
 
 			default:
@@ -113,7 +111,10 @@ void pop(Position p) {
 		printf("Lista je vec prazna!");
 		return;
 	}
-	Position temp = p->next;
+	Position temp;
+	temp = (Position)malloc(sizeof(Position));
+
+	temp = p->next;
 	p->next = temp->next;
 	free(temp);
 }
